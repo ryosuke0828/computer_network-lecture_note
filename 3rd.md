@@ -28,9 +28,9 @@
 - **TCP Service**
     - Connection-oriented: Full-duplex TCP connection, communication after handshaking
     - Reliable data transfer: Guarantees communication without transmission errors and maintains correct packet order
-    - Congestion control, flow control: Transmission rate varies depending on the situation
+    - Congestion control, flow control: Transmission rate varies depending on the network situation
 - **UDP Service**
-    - Minimal data transfer service: Does not guarantee packet order or accurate arrival
+    - Minimal data transfer service: Does not guarantee packet order or reliable arrival
     - Connectionless: No handshaking
     - No congestion control or flow control: Transmission rate is determined by the sending process
 
@@ -63,12 +63,12 @@ Examples:
         - e.g., HTTP
 
 ※ The concept of out-of-band exists in various scenarios
-- OpenFlow (Software for Software Defined Networking (SDN))
+- OpenFlow (Software for Software-Defined Networking (SDN))
 - C/U separation in 5G (Phantom cell)
     - Macro cell transmits control signals
     - Small cell performs high-speed data transfer
 
-###　Web and HTTP
+### Web and HTTP
 
 #### Overview of HTTP
 
@@ -85,5 +85,5 @@ First, the browser sends an HTTP request message, and the server returns an HTTP
 
 - Transport layer protocol is TCP
 - Stateless protocol
-    - Server does not remember client history information
+    - Server does not store client history information
     - Lightweight control, can handle many HTTP connections simultaneously
