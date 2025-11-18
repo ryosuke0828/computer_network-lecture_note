@@ -1,11 +1,11 @@
-#### FTP (File Transfer Protocol)
+### FTP (File Transfer Protocol)
 It is a protocol for out-of-band method.
 - controlling connection: port 21, persistent connection type
     - user authentication, password, commands such as cd, put and get
 - data connection: port 20, non-persistent connection type
     - Transfer actual files
 
-#### E-mail
+### E-mail
 components
 - User agent (mailer)
     - Outlook, Thunder bird, etc...
@@ -18,7 +18,7 @@ components
 Use SMTP in communications between a sending user agent and a server, or among servers.
 Use mail access protocols between a mail server and an end user agent.
 
-##### SMTP
+#### SMTP
 Transfer message from the sending mail server to the receiving mail server
 - Use 7 bits ASCII code as a data format
 1. Client SMTP connects to port 25 of server SMTP using TCP
@@ -30,7 +30,7 @@ Transfer message from the sending mail server to the receiving mail server
 - TCP connection is persistent connection type.
     If there are multiple mails to one server, they are transported using only one connection.
 
-##### Mail access protocol
+#### Mail access protocol
 The end user agent retrieves mail from the mail server.
 - POP3 (Post Office Protocol ver.3)
     - Manages mails on client side
@@ -40,18 +40,18 @@ The end user agent retrieves mail from the mail server.
     - Mail folder distribution and syncing sent mail between different terminals. (*It allows mails to have additional information such as folder, flag, etc.*)
 - Recently, HTTP based web-based E-mails (Gmail) are mainly used. (It still uses SMTP for server-to-server communication. **User access uses HTTP**)
 
-#### DNS
+### DNS
 DNS (Domain Name System)
 - Hierarchical distributed database composed of name servers
 - The application layer protocol that handles communication between hosts and name servers
 - *Most system failures are due to DNS failures.*
-##### Provided services
+#### Provided services
 - Translate domain names into IP addresses **Name resolution**
 - Registration of alias (another name) of host name and mail server name
 - DNS round-robin (load distribution)
     - Matching set of the public host name and multiple mirror servers' IP addresses
     - Shifts the order of list after each request (The client uses the first address)
-##### Structure of DNS
+#### Structure of DNS
 'DNS is a distributed database'
 **Why isn't it a centralized system?**
 - Lack of durability against failure (single point of failure)
@@ -72,4 +72,4 @@ Distributed model (classification of name servers)
     - Each host is registered in at least one auth-DNS server.
 - (Local DNS server)
     - It is used by each organization such as schools, companies, etc.
-    - Each host, at first, accesses the local DNS server that caches data from the corresponding auth-DNS server
+    - Each host, at first, accesses the local DNS server that may cache data from the corresponding auth-DNS server

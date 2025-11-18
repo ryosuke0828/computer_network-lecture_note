@@ -1,5 +1,5 @@
-### Web and HTTP
-##### Non-persistent connection and Persistent connection
+## Web and HTTP
+#### Non-persistent connection and Persistent connection
 - Non-persistent connection
     - It transfers one web object within one TCP connection.
     - It is used in HTTP/1.0
@@ -18,7 +18,7 @@
     - Pipeline processing:
     A client sends a request before it receives a response to previous requests. The server processes multiple objects. (Used in HTTP/1.1)
   
-#### HTTP message
+### HTTP message
 - There are two types of HTTP messages: Request and response
 Elements of a request message
     - Request line: HTTP method (GET, POST, HEAD, etc.), request target (URL), HTTP version.
@@ -30,7 +30,7 @@ Elements of a response message
     - Header lines: Stores Via (such as proxy server) and Content-length (data size) in key:value form
     - Body
 
-#### HTTP/2
+### HTTP/2
 The new version of HTTP which was documented in RFC in May 2015.
 - **Stream**: The virtual bidirectional sequence of multiple requests and multiple responses within a connection
     - Multiplexing streams enables sending/receiving objects at the same time. (Solution to HoL blocking)
@@ -46,7 +46,7 @@ The new version of HTTP which was documented in RFC in May 2015.
 - Priority control of streams.
 - It can be used with protocols other than TCP.
 
-#### HTTP streaming and DASH
+### HTTP streaming and DASH
 **DASH** (Dynamic Adaptive Streaming over HTTP)
 - A video is a sequence of images (24 or 30 frames/s)
 - Encodes video file at several different bit rates
